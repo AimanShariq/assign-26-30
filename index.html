@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Question 1
+
+
+    <title>Number Operations</title>
+    <h1>Number Operations</h1>
+    <label for="numberInput">Enter a positive integer:</label>
+    <input type="number" id="numberInput" min="1" step="1">
+    <button onclick="displayValues()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function displayValues() {
+            const number = parseFloat(document.getElementById('numberInput').value);
+            if (isNaN(number) || number <= 0) {
+                document.getElementById('output').innerText = "Please enter a valid positive integer.";
+                return;
+            }
+
+            const roundValue = Math.round(number);
+            const floorValue = Math.floor(number);
+            const ceilValue = Math.ceil(number);
+
+            document.getElementById('output').innerHTML = `
+                <strong>Number:</strong> ${number} <br>
+                <strong>Round off value:</strong> ${roundValue} <br>
+                <strong>Floor value:</strong> ${floorValue} <br>
+                <strong>Ceil value:</strong> ${ceilValue}
+            `;
+        }
+    </script>
+
+
+    <!-- Question2 
+
+
+    <title>Number Operations</title>
+    <h2>Enter a Negative Floating Point Number</h2>
+    <input type="number" id="numberInput" step="any">
+    <button onclick="displayValues()">Submit</button>
+
+    <p>Number: <span id="number"></span></p>
+    <p>Round Off Value: <span id="roundOff"></span></p>
+    <p>Floor Value: <span id="floor"></span></p>
+    <p>Ceil Value: <span id="ceil"></span></p>
+
+    <script>
+        function displayValues() {
+            let number = parseFloat(document.getElementById('numberInput').value);
+            document.getElementById('number').innerText = number;
+            document.getElementById('roundOff').innerText = Math.round(number);
+            document.getElementById('floor').innerText = Math.floor(number);
+            document.getElementById('ceil').innerText = Math.ceil(number);
+        }
+    </script> -->
+
+
+    <!-- Question 3
+
+
+<title>Absolute Value Calculator</title>
+    <h2>Absolute Value Calculator</h2>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="displayAbsoluteValue()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function displayAbsoluteValue() {
+            // Get the input value
+            let number = document.getElementById("numberInput").value;
+            // Calculate the absolute value
+            let absoluteValue = Math.abs(number);
+            // Display the result
+            document.getElementById("result").innerText = "The absolute value is: " + absoluteValue;
+        }
+    </script> -->
+
+  <!-- Question 4
+
+
+<title>Dice Roll Simulator</title>
+</head>
+<body>
+    <h1>Dice Roll Simulator</h1>
+    <button onclick="rollDice()">Roll the Dice</button>
+    <p id="diceValue">Roll the dice to see the result!</p>
+
+    <script src="app.js"></script> -->
+
+ <!-- QUESTION 5
+
+
+    <title>Coin Toss Simulator</title>
+</head>
+<body>
+    <h1>Coin Toss Result</h1>
+    <button onclick="tossCoin()">Toss the Coin</button>
+    <p id="result"></p>
+
+    <script src="app.js"></script> -->
+
+
+    <!-- Question 6
+
+
+    <title>Random Number Generator</title>
+    <h1>Random Number Generator</h1>
+    <p id="randomNumber"></p>
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+
+    <script>
+        function generateRandomNumber() {
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('randomNumber').innerText = randomNumber;
+        }
+    </script> -->
+
+
+    <!-- Question 7
+
+
+<title>Weight Input</title>
+    <h1>Enter Your Weight</h1>
+    <input type="text" id="weightInput" placeholder="Enter your weight">
+    <button onclick="displayWeight()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+        function displayWeight() {
+            let weight = document.getElementById('weightInput').value;
+            let parsedWeight = parseFloat(weight);
+
+            if (isNaN(parsedWeight)) {
+                document.getElementById('output').innerText = "Invalid input. Please enter a valid weight.";
+            } else {
+                document.getElementById('output').innerText = "Your weight is " + parsedWeight + " kg.";
+            }
+        }
+    </script> -->
+
+
+    <!-- Question 8
+
+
+
+    <title>Guess the Secret Number</title>
+    <script>
+        // Generate a random secret number between 1 and 10
+        const secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            // Get the user's guess from the input field
+            const userGuess = document.getElementById("guess").value;
+
+            // Check if the user's guess is correct
+            if (userGuess == secretNumber) {
+                alert("Congratulations! You guessed the secret number.");
+            } else {
+                alert("Sorry, that's not correct. Try again!");
+            }
+        }
+    </script>
+<body>
+    <h1>Guess the Secret Number</h1>
+    <p>Enter a number between 1 and 10:</p>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkGuess()">Submit</button> -->
+</body>
+</html>
